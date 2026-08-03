@@ -118,10 +118,9 @@
   flex-direction: column;
   align-items: flex-start;
   gap: 0;
-  font-family: Impact, "Arial Black", "Haettenschweiler", "Franklin Gothic Bold",
-    sans-serif;
+  font-family: "Montserrat", "Arial Black", Arial, sans-serif;
   font-size: clamp(2.6rem, 8vw, 6.2rem);
-  font-weight: 400;
+  font-weight: 800;
   letter-spacing: 0.01em;
   line-height: 0.8;
   text-transform: uppercase;
@@ -131,9 +130,8 @@
 
 .hero__title-line,
 .hero__title-line--mid {
-  font-family: Impact, "Arial Black", "Haettenschweiler", "Franklin Gothic Bold",
-    sans-serif;
-  font-weight: 400;
+  font-family: inherit;
+  font-weight: 800;
   opacity: 0.9;
 }
 
