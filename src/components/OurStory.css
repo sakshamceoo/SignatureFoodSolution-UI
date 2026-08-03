@@ -1,0 +1,295 @@
+.story {
+  position: relative;
+  background: var(--cream);
+  overflow: clip;
+}
+
+.story__botanicals {
+  position: absolute;
+  inset: 0;
+  pointer-events: none;
+  z-index: 0;
+  opacity: 0.55;
+}
+
+.story__graphic {
+  position: absolute;
+  width: clamp(180px, 28vw, 360px);
+  height: auto;
+  object-fit: contain;
+  user-select: none;
+}
+
+.story__graphic--tl {
+  top: 8vh;
+  left: -4vw;
+  opacity: 0.35;
+}
+
+.story__graphic--br {
+  bottom: 12vh;
+  right: -6vw;
+  opacity: 0.4;
+}
+
+.story__layout {
+  position: relative;
+  z-index: 1;
+  display: grid;
+  grid-template-columns: 1fr;
+  max-width: 1280px;
+  margin: 0 auto;
+  padding: 0 clamp(1rem, 4vw, 3rem);
+}
+
+.story__media {
+  display: none;
+}
+
+.story__media-sticky {
+  position: sticky;
+  top: var(--nav-h);
+  height: calc(100vh - var(--nav-h));
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  gap: 1.25rem;
+  padding: 1.5rem 0;
+}
+
+.story__progress {
+  position: absolute;
+  left: 0;
+  top: 18%;
+  bottom: 22%;
+  width: 2px;
+  border-radius: 999px;
+  background: rgba(45, 90, 68, 0.12);
+  overflow: hidden;
+}
+
+.story__progress-fill {
+  display: block;
+  width: 100%;
+  height: 100%;
+  transform-origin: top center;
+  background: linear-gradient(180deg, var(--forest) 0%, var(--red) 100%);
+  border-radius: inherit;
+}
+
+.story__video-wrap {
+  position: relative;
+  width: 100%;
+  aspect-ratio: 4 / 5;
+  max-height: min(68vh, 640px);
+  margin-left: 1.5rem;
+  border-radius: 40px;
+  overflow: hidden;
+  background: var(--beige-deep);
+  box-shadow:
+    0 28px 60px -28px rgba(45, 90, 68, 0.38),
+    0 10px 28px -18px rgba(26, 40, 32, 0.18);
+}
+
+.story__video {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  pointer-events: none;
+  transition: object-position 0.7s ease;
+}
+
+.story__video.is-active {
+  opacity: 1;
+}
+
+.story__chapter-meta {
+  display: flex;
+  align-items: baseline;
+  justify-content: space-between;
+  gap: 1rem;
+  margin-left: 1.5rem;
+  padding-right: 0.25rem;
+}
+
+.story__chapter-label {
+  margin: 0;
+  font-size: 0.72rem;
+  font-weight: 700;
+  letter-spacing: 0.16em;
+  text-transform: uppercase;
+  color: var(--red);
+}
+
+.story__chapter-index {
+  font-family: var(--font-display);
+  font-size: 0.95rem;
+  font-weight: 700;
+  color: var(--forest);
+  letter-spacing: 0.04em;
+}
+
+.story__chapter-index span {
+  color: var(--muted);
+  font-weight: 500;
+}
+
+.story__panels {
+  position: relative;
+}
+
+.story__panel {
+  min-height: 100svh;
+  display: flex;
+  align-items: center;
+  padding: calc(var(--nav-h) + 1.5rem) 0 3rem;
+}
+
+.story__panel-inner {
+  max-width: 34rem;
+  opacity: 0.22;
+  transform: translateY(28px);
+  transition:
+    opacity 0.55s var(--ease-out),
+    transform 0.55s var(--ease-out);
+}
+
+.story__panel-inner.is-active {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+.story__eyebrow {
+  font-size: 0.75rem;
+  font-weight: 700;
+  letter-spacing: 0.18em;
+  text-transform: uppercase;
+  color: var(--red);
+  margin-bottom: 1.25rem;
+}
+
+.story__title {
+  font-family: var(--font-display);
+  font-size: clamp(2.4rem, 6vw, 3.75rem);
+  font-weight: 700;
+  letter-spacing: -0.035em;
+  line-height: 1.05;
+  color: var(--forest);
+  margin-bottom: 1.35rem;
+}
+
+.story__body {
+  font-size: clamp(1.05rem, 2vw, 1.2rem);
+  line-height: 1.75;
+  color: var(--muted);
+  max-width: 30rem;
+}
+
+.story__cta {
+  margin-top: 2rem;
+}
+
+.story__footer-bar {
+  position: relative;
+  z-index: 1;
+  max-width: 1280px;
+  margin: 0 auto;
+  padding: 1.5rem clamp(1rem, 4vw, 3rem) 3rem;
+}
+
+.story__back {
+  display: inline-flex;
+  font-size: 0.82rem;
+  font-weight: 700;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  color: var(--forest);
+  border-bottom: 1px solid rgba(45, 90, 68, 0.25);
+  padding-bottom: 0.2rem;
+  transition: color 0.3s ease, border-color 0.3s ease;
+}
+
+.story__back:hover {
+  color: var(--red);
+  border-color: var(--red);
+}
+
+/* Mobile: stacked storytelling — sticky split is desktop-first */
+@media (max-width: 899px) {
+  .story__layout {
+    gap: 0;
+    padding-top: calc(var(--nav-h) + 0.5rem);
+  }
+
+  .story__media {
+    display: block;
+    position: relative;
+  }
+
+  .story__media-sticky {
+    position: relative;
+    top: auto;
+    height: auto;
+    padding: 0.5rem 0 0.35rem;
+    gap: 0.65rem;
+  }
+
+  .story__progress {
+    display: none;
+  }
+
+  .story__video-wrap {
+    margin-left: 0;
+    aspect-ratio: 16 / 10;
+    max-height: none;
+    border-radius: 28px;
+  }
+
+  .story__chapter-meta {
+    margin-left: 0.15rem;
+  }
+
+  .story__panel {
+    min-height: auto;
+    padding: 3rem 0;
+  }
+
+  .story__panel + .story__panel {
+    border-top: 1px solid rgba(45, 90, 68, 0.08);
+  }
+
+  .story__panel-inner {
+    opacity: 1 !important;
+    transform: none !important;
+  }
+
+  .story__panel-inner.is-active {
+    opacity: 1 !important;
+  }
+}
+
+@media (min-width: 900px) {
+  .story__layout {
+    grid-template-columns: 0.4fr 0.6fr;
+    gap: clamp(2rem, 4vw, 4.5rem);
+    align-items: stretch;
+  }
+
+  .story__media {
+    display: block;
+  }
+
+  .story__panel {
+    min-height: 100vh;
+    padding: 0;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .story__video,
+  .story__panel-inner {
+    transition: none !important;
+  }
+}

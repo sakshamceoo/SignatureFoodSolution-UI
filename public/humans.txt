@@ -1,0 +1,15 @@
+/*
+ * Signature Food Solutions
+ * Premium supplier of poultry, meat, seafood, and ready-to-eat products.
+ * Parent Company: Vortex Ventures
+ * Service Area: Delhi, Noida, Gurugram, Ghaziabad, Faridabad & Delhi NCR
+ * Warehouse: Shahdara, Delhi, India
+ * Bulk Supply: Restaurants, Hotels, Caterers, Retailers, Wholesalers & HoReCa
+ * Contact: vortexventures.india@gmail.com
+
+ 
+ * Website: https://signaturefoodsolutions.com
+ * Sitemap: https://signaturefoodsolutions.com/sitemap.xml
+ * LLM Index: https://signaturefoodsolutions.com/llms.txt
+ * Last Updated: 2026-07-29
+ */
