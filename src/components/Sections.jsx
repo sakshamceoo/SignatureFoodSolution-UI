@@ -704,7 +704,7 @@ const faqs = [
     a: "Our fresh meat contains no preservatives or antibiotics. Only marinated and ready-to-eat items contain natural preservatives.",
   }
 ];
-
+//hello
 export function Faq() {
   return (
     <section id="faq" className="band faq" aria-labelledby="faq-heading">
