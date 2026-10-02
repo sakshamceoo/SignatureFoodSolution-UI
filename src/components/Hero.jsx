@@ -130,7 +130,7 @@ export default function Hero() {
           >
            Fresh Poultry, Meat & Seafood Delivered with Care.
           </motion.p>
-
+ //new code
           <motion.div
             className="hero__actions"
             initial={{ opacity: 0, y: 16 }}
