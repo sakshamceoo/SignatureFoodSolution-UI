@@ -65,17 +65,29 @@ export default function Navbar() {
     };
   }, [open]);
 
-  // Scroll to hash after navigating home from another route
+  // Home sections such as Networks load after the route change, so keep
+  // looking until the target is actually in the page.
   useEffect(() => {
     if (location.pathname !== "/") return;
     const hash = location.hash?.replace("#", "");
     if (!hash) return;
-    const el = document.getElementById(hash);
-    if (el) {
-      requestAnimationFrame(() => {
-        el.scrollIntoView({ behavior: "smooth" });
-      });
-    }
+
+    let frame = 0;
+    const started = performance.now();
+
+    const tryScroll = () => {
+      const el = document.getElementById(hash);
+      if (el) {
+        el.scrollIntoView({ behavior: "smooth", block: "start" });
+        return;
+      }
+      if (performance.now() - started < 4000) {
+        frame = requestAnimationFrame(tryScroll);
+      }
+    };
+
+    frame = requestAnimationFrame(tryScroll);
+    return () => cancelAnimationFrame(frame);
   }, [location.pathname, location.hash]);
 
   return (
@@ -113,7 +125,7 @@ export default function Navbar() {
                 <span className="nav__name">
                   Signature
                   <br />
-                  Food Solutions
+                  Food Solutions<sup className="tm">TM</sup>
                 </span>
               </Link>
             </motion.div>
@@ -180,7 +192,7 @@ export default function Navbar() {
                 onClick={() => setOpen(false)}
               >
                 <img src={logo} alt="" className="nav__logo" />
-                <span>Signature Food Solutions</span>
+                <span>Signature Food Solutions<sup className="tm">TM</sup></span>
               </Link>
             )}
             {links.map(({ to, label, Icon, cta, page }, i) => (

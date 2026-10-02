@@ -129,7 +129,7 @@ export function WhoAreWe() {
                 <LazyVideo
                   className="who__video-el"
                   loader={() => import("../assets/video1.mp4")}
-                  aria-label="Poultry farm footage from Signature Food Solutions"
+                  aria-label="Poultry farm footage from Signature Food Solutions™"
                 />
               </div>
             </motion.div>
@@ -142,7 +142,7 @@ export function WhoAreWe() {
               transition={{ duration: 0.85, ease, delay: 0.12 }}
             >
               <p className="who__lead">
-              At Signature Food Solutions, we source premium poultry, meat, and seafood from trusted partners, ensuring every product is hygienically processed and delivered with uncompromising freshness and quality.
+              At Signature Food Solutions™, we source premium poultry, meat, and seafood from trusted partners, ensuring every product is hygienically processed and delivered with uncompromising freshness and quality.
               </p>
               <ul className="who__checks">
                 {whoChecks.map((item) => (
@@ -280,7 +280,7 @@ export function BulkOrder() {
             and dependable service.
           </motion.p>
           <motion.a
-            href="https://wa.me/919999889036?text=Hello%20Signature%20Food%20Solutions%20I%20want%20to%20enquire%20about%20bulk%20orders"
+            href="https://wa.me/919999889036?text=Hello%20Signature%20Food%20Solutions%E2%84%A2%20I%20want%20to%20enquire%20about%20bulk%20orders"
             className="btn-primary bulk__cta"
             target="_blank"
             rel="noopener noreferrer"
@@ -301,7 +301,7 @@ export function BulkOrder() {
         >
           <img
             src={bulkImg}
-            alt="Signature Food Solutions bulk delivery box filled with fresh poultry, red meat, eggs, and herbs"
+            alt="Signature Food Solutions™ bulk delivery box filled with fresh poultry, red meat, eggs, and herbs"
             loading="lazy"
             decoding="async"
           />
@@ -386,7 +386,7 @@ const contactCards = [
     title: "WhatsApp",
     detail: "Typically replies within minutes",
     action: "Start Chat",
-    href: "https://wa.me/919999889036?text=Hi%20Signature%20Food%20Solutions%20i%20have%20the%20enquiry%20regarding%20the%20products%20you%20are%20offering%20",
+    href: "https://wa.me/919999889036?text=Hi%20Signature%20Food%20Solutions%E2%84%A2%20i%20have%20the%20enquiry%20regarding%20the%20products%20you%20are%20offering%20",
     offset: "contact-card--b",
   },
   {
@@ -549,7 +549,7 @@ export function Contact() {
           </motion.ul>
 
           <motion.a
-            href="https://wa.me/919999889036?text=Hi%20Signature%20Food%20Solutions%20i%20have%20the%20enquiry%20regarding%20"
+            href="https://wa.me/919999889036?text=Hi%20Signature%20Food%20Solutions%E2%84%A2%20i%20have%20the%20enquiry%20regarding%20"
             className="contact__whatsapp-cta"
             target="_blank"
             rel="noreferrer"
@@ -640,7 +640,7 @@ export function Contact() {
       </motion.div>
 
       <a
-        href="https://wa.me/919999889036?text=Hi%20Signature%20Food%20Solutions%20i%20have%20the%20enquiry%20regarding%20the%20products%20you%20are%20offering%20"
+        href="https://wa.me/919999889036?text=Hi%20Signature%20Food%20Solutions%E2%84%A2%20i%20have%20the%20enquiry%20regarding%20the%20products%20you%20are%20offering%20"
         className={`contact__sticky-wa ${showSticky ? "is-visible" : ""}`}
         target="_blank"
         rel="noreferrer"
@@ -666,14 +666,14 @@ export function Footer() {
           <Link to="/" className="footer__brand">
             <img
               src={logo}
-              alt="Signature Food Solutions"
+              alt="Signature Food Solutions™"
               className="footer__logo"
             />
-            <span className="footer__name">Signature Food Solutions</span>
+            <span className="footer__name">Signature Food Solutions<sup className="tm">TM</sup></span>
           </Link>
         </motion.div>
         <p>
-          © {new Date().getFullYear()} Signature Food Solutions. All rights reserved.
+          © {new Date().getFullYear()} Signature Food Solutions™. All rights reserved.
           <br />
           A Vortex Ventures Enterprise.
         </p>
@@ -684,16 +684,16 @@ export function Footer() {
 
 const faqs = [
   {
-    q: "What products does Signature Food Solutions supply?",
+    q: "What products does Signature Food Solutions™ supply?",
     a: "We supply fresh chicken, premium mutton, seafood, and ready-to-eat products for households and bulk buyers such as restaurants, hotels, caterers, retailers, and wholesalers.",
   },
   {
-    q: "Where does Signature Food Solutions deliver?",
+    q: "Where does Signature Food Solutions™ deliver?",
     a: "We deliver across Delhi NCR with cold-chain handling to preserve freshness from warehouse to door.",
   },
   {
     q: "Do you support bulk and wholesale orders?",
-    a: "Yes. Signature Food Solutions specializes in bulk poultry and seafood supply tailored for HoReCa and wholesale buyers.",
+    a: "Yes. Signature Food Solutions™ specializes in bulk poultry and seafood supply tailored for HoReCa and wholesale buyers.",
   },
   {
     q: "Where is your warehouse located?",

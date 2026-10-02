@@ -13,7 +13,7 @@ const chapters = [
     id: "trust",
     label: "01",
     title: "Built on Trust.",
-    body: "At Signature Food Solutions, freshness begins long before our products reach your kitchen. We partner with trusted allied farms committed to responsible farming, hygiene, and uncompromising quality.",
+    body: "At Signature Food Solutions™, freshness begins long before our products reach your kitchen. We partner with trusted allied farms committed to responsible farming, hygiene, and uncompromising quality.",
     position: "center",
   },
   {

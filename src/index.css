@@ -232,10 +232,27 @@ ul {
   transform: scale(-1) rotate(6deg);
 }
 
+#network,
+#bulk,
+#career,
+#contact {
+  scroll-margin-top: calc(var(--nav-h) + 0.75rem);
+}
+
 .wave-divider {
   display: block;
   width: 100%;
   height: clamp(48px, 8vw, 90px);
   color: var(--cream-deep);
   margin-bottom: -1px;
+}
+
+.tm {
+  font-size: 0.45em;
+  font-weight: 700;
+  letter-spacing: 0.04em;
+  line-height: 0;
+  margin-left: 0.12em;
+  vertical-align: 0.85em;
+  text-transform: none;
 }

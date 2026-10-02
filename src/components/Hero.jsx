@@ -118,7 +118,7 @@ export default function Hero() {
               <span>Food</span>
             </motion.span>
             <motion.span className="hero__title-line" custom={2} variants={lineVariants}>
-              Solutions
+              Solutions<sup className="tm">TM</sup>
             </motion.span>
           </h1>
 
@@ -161,7 +161,7 @@ export default function Hero() {
         >
           <motion.img
             src={heroImg}
-            alt="Gourmet roasted chicken meal in a Signature Food Solutions delivery box with fresh herbs, tomatoes, and artisan bread"
+            alt="Gourmet roasted chicken meal in a Signature Food Solutions™ delivery box with fresh herbs, tomatoes, and artisan bread"
             className="hero__img"
             fetchPriority="high"
             whileHover={{ scale: 1.03 }}

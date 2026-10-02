@@ -1,5 +1,5 @@
 import { lazy, Suspense, useEffect, useRef, useState } from "react";
-import { BrowserRouter, Routes, Route } from "react-router-dom";
+import { BrowserRouter, Routes, Route, useLocation } from "react-router-dom";
 import Navbar from "./components/Navbar";
 import Hero from "./components/Hero";
 import {
@@ -21,9 +21,13 @@ function RouteFallback() {
 }
 
 /** Mount children only when near viewport — defers heavy section chunks. */
-function DeferUntilVisible({ children, minHeight = 420, rootMargin = "280px" }) {
+function DeferUntilVisible({ children, minHeight = 420, rootMargin = "280px", force = false }) {
   const ref = useRef(null);
-  const [show, setShow] = useState(false);
+  const [show, setShow] = useState(force);
+
+  useEffect(() => {
+    if (force) setShow(true);
+  }, [force]);
 
   useEffect(() => {
     const node = ref.current;
@@ -50,12 +54,14 @@ function DeferUntilVisible({ children, minHeight = 420, rootMargin = "280px" }) 
 }
 
 function HomePage() {
+  const { hash } = useLocation();
+
   return (
     <>
       <main id="main-content">
         <Hero />
         <WhoAreWe />
-        <DeferUntilVisible minHeight={520}>
+        <DeferUntilVisible minHeight={520} force={hash === "#network"}>
           <Suspense fallback={<div style={{ minHeight: 520 }} aria-hidden="true" />}>
             <WarehouseNetwork />
           </Suspense>

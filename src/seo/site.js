@@ -5,15 +5,15 @@
 export const SITE_URL = "https://signaturefoodsolutions.com";
 
 export const SITE = {
-  name: "Signature Food Solutions",
-  legalName: "Signature Food Solutions",
+  name: "Signature Food Solutions™",
+  legalName: "Signature Food Solutions™",
   tagline: "Freshness, Delivered Without Compromise.",
   description:
-    "Signature Food Solutions supplies farm-fresh chicken, premium mutton, seafood, and ready-to-eat products across Delhi NCR. Hygienic processing, cold-chain delivery, and bulk supply for restaurants, hotels, caterers, retailers, and wholesalers.",
+    "Signature Food Solutions™ supplies farm-fresh chicken, premium mutton, seafood, and ready-to-eat products across Delhi NCR. Hygienic processing, cold-chain delivery, and bulk supply for restaurants, hotels, caterers, retailers, and wholesalers.",
   email: "vortexventures.india@gmail.com, signaturefoodsolutions@gmail.com",
   phoneDisplay: "+91 9999889036\n+91 9667919993",
   phoneE164: "+919999889036\n+919667919993",
-  whatsapp: "https://wa.me/919999889036?text=Hi%20Signature%20Food%20Solutions%20i%20have%20the%20enquiry%20regarding%20the%20products%20you%20are%20offering%20",
+  whatsapp: "https://wa.me/919999889036?text=Hi%20Signature%20Food%20Solutions%E2%84%A2%20i%20have%20the%20enquiry%20regarding%20the%20products%20you%20are%20offering%20",
   address: {
     locality: "Shahdara",
     region: "Delhi",
@@ -34,7 +34,7 @@ export const SITE = {
     "cold chain meat delivery",
     "restaurant poultry supplier",
     "hotel meat supplier",
-    "Signature Food Solutions",
+    "Signature Food Solutions™",
   ],
 };
 
@@ -72,7 +72,7 @@ export const PAGES = {
     path: "/products",
     title: "Our Products — Chicken, Mutton, Seafood & Ready to Eat",
     description:
-      "Browse Signature Food Solutions products: fresh chicken, premium mutton, seafood, and ready-to-eat items. Bulk-ready supply with hygienic processing and cold-chain delivery across Delhi NCR.",
+      "Browse Signature Food Solutions™ products: fresh chicken, premium mutton, seafood, and ready-to-eat items. Bulk-ready supply with hygienic processing and cold-chain delivery across Delhi NCR.",
     keywords:
       "chicken products Delhi, mutton wholesale, seafood supplier, ready to eat chicken, bulk poultry catalogue",
     type: "website",
@@ -81,9 +81,9 @@ export const PAGES = {
     path: "/story",
     title: "Our Story — From Trusted Farms to Fresh Delivery",
     description:
-      "Learn how Signature Food Solutions partners with trusted farms, raises poultry with care, applies strict quality control, and delivers freshness across Delhi NCR.",
+      "Learn how Signature Food Solutions™ partners with trusted farms, raises poultry with care, applies strict quality control, and delivers freshness across Delhi NCR.",
     keywords:
-      "poultry farm to table, food quality story, Signature Food Solutions story, hygienic meat processing",
+      "poultry farm to table, food quality story, Signature Food Solutions™ story, hygienic meat processing",
     type: "article",
   },
 };
@@ -231,7 +231,7 @@ export function faqJsonLd() {
     mainEntity: [
       {
         "@type": "Question",
-        name: "What products does Signature Food Solutions supply?",
+        name: "What products does Signature Food Solutions™ supply?",
         acceptedAnswer: {
           "@type": "Answer",
           text: "We supply fresh chicken, premium mutton, seafood, and ready-to-eat products for households and bulk buyers such as restaurants, hotels, caterers, retailers, and wholesalers.",
@@ -239,7 +239,7 @@ export function faqJsonLd() {
       },
       {
         "@type": "Question",
-        name: "Where does Signature Food Solutions deliver?",
+        name: "Where does Signature Food Solutions™ deliver?",
         acceptedAnswer: {
           "@type": "Answer",
           text: "We deliver across Delhi NCR with cold-chain handling to preserve freshness from warehouse to door.",
@@ -250,7 +250,7 @@ export function faqJsonLd() {
         name: "Do you support bulk and wholesale orders?",
         acceptedAnswer: {
           "@type": "Answer",
-          text: "Yes. Signature Food Solutions specializes in bulk poultry and seafood supply tailored for HoReCa and wholesale buyers.",
+          text: "Yes. Signature Food Solutions™ specializes in bulk poultry and seafood supply tailored for HoReCa and wholesale buyers.",
         },
       },
       {

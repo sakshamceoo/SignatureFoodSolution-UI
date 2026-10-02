@@ -141,6 +141,23 @@
   padding: 0;
 }
 
+.hero__brand {
+  display: inline-block;
+  white-space: nowrap;
+}
+
+.hero__title .tm {
+  position: static;
+  display: inline-block;
+  margin: 0 -1.55em 0 0.06em;
+  font-size: 0.28em;
+  font-weight: 800;
+  line-height: 1;
+  letter-spacing: 0.02em;
+  vertical-align: 2.45em;
+  transform: none;
+}
+
 .hero__title-line--mid {
   display: inline-flex;
   align-items: center;
@@ -248,29 +265,40 @@
 
 @media (min-width: 900px) {
   .hero__inner {
+    display: grid;
+    grid-template-columns: minmax(0, 1.05fr) minmax(0, 0.95fr);
+    align-items: center;
     flex-wrap: nowrap;
     min-height: calc(100svh - var(--nav-h) - 1rem);
     padding-top: calc(var(--nav-h) + 0.5rem);
-    gap: 1.5rem;
+    gap: clamp(1.5rem, 3vw, 2.75rem);
   }
 
   .hero__copy {
-    flex: 0 1 38%;
-    max-width: 40%;
+    flex: unset;
+    max-width: none;
+    min-width: 0;
+  }
+
+  .hero__title {
+    font-size: clamp(2.4rem, 4.6vw, 5.1rem);
+    max-width: 100%;
   }
 
   .hero__media {
-    flex: 1.35 1 55%;
+    flex: unset;
     justify-content: flex-end;
-    max-width: 60%;
+    max-width: 100%;
+    min-width: 0;
   }
 
   .hero__img {
-    max-width: min(100%, 720px);
+    width: 100%;
+    max-width: 100%;
   }
 
   .hero__logo {
-    height: clamp(9.5rem, 14vw, 14rem);
+    height: clamp(7.5rem, 11vw, 11rem);
   }
 }
 
@@ -327,7 +355,7 @@
   }
 
   .hero__title {
-    font-size: clamp(2.35rem, 11vw, 3.6rem);
+    font-size: clamp(1.7rem, 8.8vw, 3.15rem);
     align-items: center;
     text-align: center;
     width: 100%;
@@ -380,7 +408,7 @@
 
 @media (max-width: 480px) {
   .hero__title {
-    font-size: clamp(2.1rem, 12vw, 2.75rem);
+    font-size: clamp(1.55rem, 8.2vw, 2.15rem);
   }
 
   .hero__actions .btn-primary,
